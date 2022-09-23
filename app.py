@@ -11,7 +11,7 @@ app = Flask(__name__)
 def login():
     if request.method == 'POST':
         results = []
-        for page_num in range(1, 2):
+        for page_num in range(1, 5):
             user_subject = request.form['user_subject']
             user_grade = request.form['user_grade']
             user_question = request.form['user_question']
@@ -48,4 +48,4 @@ def get_question_links(block):
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+    app.run()
